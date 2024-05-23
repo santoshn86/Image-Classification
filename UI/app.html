@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Image Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Friends Images Classifier</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" data-player="gurukul_more">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/gurukul.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Gurukul More</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-player="kunal_anvade">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/kunal.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Kunal Anvade</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-player="santosh_narwad">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="./images/santosh.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Santosh Narwad</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-player="vaibhav_pawar">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/vaibhav.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Vaibhav Pawar</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-player="vinay_more">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/vinay.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Vinay More</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                        <tr>
+                            <th>Friends Name</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Gurukul More</td>
+                            <td id="score_gurukul_more"></td>
+                        </tr>
+                        <tr>
+                            <td>Kunal Anvade</td>
+                            <td id="score_kunal_anvade"></td>
+                        </tr>
+                        <tr>
+                            <td>Santosh Narwad</td>
+                            <td id="score_santosh_narwad"></td>
+                        </tr>
+                        <tr>
+                            <td>Vaibhav Pawar</td>
+                            <td id="score_vaibhav_pawar"></td>
+                        </tr>
+                        <tr>
+                            <td>Vinay More</td>
+                            <td id="score_vinay_more"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
